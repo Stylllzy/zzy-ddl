@@ -1,0 +1,25 @@
+<!--custom-tab-bar/index.wxml-->
+<!-- <i-tab-bar fixed current="{{ current }}" color="#2d8cf0" bindchange="handleChange">
+    <i-tab-bar-item key="index"
+    i-class="home"
+    icon="homepage" 
+    current-icon="homepage_fill" 
+    title="首页"></i-tab-bar-item>
+
+    <i-tab-bar-item key="mine"
+    i-class="mine" 
+    icon="mine" 
+    current-icon="mine_fill" 
+    title="我的"></i-tab-bar-item>
+</i-tab-bar> -->
+
+<van-tabbar
+  active="{{ tabbars.active }}"
+  active-color="#2d8cf0"
+  inactive-color="#000"
+  bind:change="onChange"
+>
+  <block wx:for="{{ tabbars.list }}" wx:key="text">
+    <van-tabbar-item icon="{{item.icon}}">{{item.text}}</van-tabbar-item>
+  </block>
+</van-tabbar>

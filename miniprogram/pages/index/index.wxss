@@ -1,0 +1,25 @@
+/* pages/index/index.wxss */
+@import '../../miniprogram_npm/@vant/weapp/grid/index.wxss';
+@import '../../miniprogram_npm/@vant/weapp/grid-item/index.wxss';
+
+.swiper-item image {
+  width: 100%;
+}
+.content {
+  height: 100%;
+}
+
+.bg-image{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  opacity: 0.6
+}
+
+.day {
+  margin: 0 10rpx 0 10rpx;
+  font-weight: bold;
+  color: rgb(218, 102, 121);
+}

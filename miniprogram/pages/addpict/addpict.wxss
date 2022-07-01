@@ -1,0 +1,15 @@
+/* pages/addpict/addpict.wxss */
+.add {
+  display: flex;
+  justify-content: center;
+}
+.button {
+  padding: 20rpx;
+}
+.picture {
+  display: flex;
+  flex-direction: column;
+}
+.picture image {
+  width: 100%;
+}

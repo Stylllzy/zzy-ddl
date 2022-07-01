@@ -1,0 +1,13 @@
+/* pages/dayedit/dayedit.wxss */
+.header {
+  margin-top: 40rpx;
+}
+.input {
+  margin-top: 40rpx;
+}
+.input-item2 {
+  margin-top: 40rpx;
+}
+.input-item2 > .picker {
+  margin-left: 30rpx;
+}

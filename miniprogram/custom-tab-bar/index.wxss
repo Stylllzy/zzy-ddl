@@ -1,0 +1,4 @@
+/* custom-tab-bar/index.wxss */
+.i-tab-bar-item-title{
+  width: 30px;
+}

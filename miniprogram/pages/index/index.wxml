@@ -1,0 +1,82 @@
+<!--pages/index/index.wxml-->
+<!-- <van-notice-bar
+  color="#2d8cf0"
+  background="#ecf9ff"
+  left-icon="volume-o"
+  mode="closeable"
+  text="永远相信美好的事情即将发生"
+/> -->
+
+<swiper class="swiper"
+  circular 
+  autoplay 
+  interval="3000" 
+  indicator-dots 
+  indicator-active-color="#fff">
+  <block wx:for="{{list}}" wx:key="index">
+    <swiper-item class="swiper-item">
+      <image src="{{item}}"mode="widthFix"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<van-divider
+  contentPosition="center"
+  customStyle="color: #2d8cf0; border-color: #2d8cf0; font-size: 18px;"
+>Today is {{nowDate}}
+</van-divider>
+
+<van-divider
+  contentPosition="center"
+  customStyle="color: #2d8cf0; border-color: #2d8cf0; font-size: 18px;"
+>We are together for <span class="day">{{towDaysBetween}}</span>days! 
+</van-divider>
+
+<van-grid clickable column-num="2" border="{{false}}"
+          icon-size="40px">
+  <van-grid-item
+    icon="like-o"
+    link-type="navigateTo"
+    url="/pages/picture/picture"
+  />
+  <van-grid-item
+    icon="add-o"
+    link-type="navigateTo"
+    url="/pages/addpict/addpict"
+  />
+</van-grid>
+
+<van-divider
+  contentPosition="center"
+  customStyle="color: #2d8cf0; border-color: #2d8cf0; font-size: 18px;"
+>WBR 傻 呗
+</van-divider>
+
+<!-- <view class="content">
+  <scroll-view scroll-y="true" style="height: 500rpx;" 
+  bindscrolltoupper="upper" 
+  bindscrolltolower="lower" 
+  bindscroll="scroll" 
+  scroll-top="{{scrollTop}}">
+          <van-empty wx:if="{{isShow}}" description="描述文字"/>
+          <view class="scroll-view-item">
+            <i-card title="卡片标题" 
+                    thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+              <view slot="content">内容不错</view>
+              <view slot="footer">尾部内容</view>
+            </i-card>
+          </view>
+  </scroll-view>
+</view> -->
+
+<image class="bg-image" mode="widthFix" src="../../assets/images/bg.png"></image>
+
+
+<van-button type="primary" 
+          icon="add-o" 
+          round style="position: absolute;bottom: 100px;left: 1px;width: 100%;"
+          custom-style="background:#2d8cf0;width:80%;left:10%;" 
+          bind:tap="goToEdit">新倒数日</van-button>
+
+
+

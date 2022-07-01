@@ -1,0 +1,16 @@
+<!--pages/addpict/addpict.wxml-->
+<view class="add">
+  <van-button class="button" color="#2d8cf0" 
+              plain 
+              icon="photo" 
+              type="primary" bind:tap="upload">上传图片</van-button>
+  <van-button class="button" color="#2d8cf0" 
+              plain 
+              icon="photo" bindtap="getFile">图片展示</van-button>
+</view>
+
+<view class="picture">
+  <block wx:for="{{images}}" wx:key="index">
+    <image src="{{item.fileID}}" mode="widthFix"></image>
+  </block>
+</view>

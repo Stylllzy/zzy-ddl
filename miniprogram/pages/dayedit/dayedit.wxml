@@ -1,0 +1,31 @@
+<view class="header">
+  <i-card title="卡片标题" 
+          thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+    <view slot="content">内容不错</view>
+    <view slot="footer">尾部内容</view>
+  </i-card>
+</view>
+
+<form catchsubmit="formSubmit" catchreset="formReset">
+  <view class="input">
+    <view class="input-item1">
+      <van-cell-group>
+        <van-field
+          value="{{ value }}"
+          label="标题"
+          placeholder="标题内容"
+          left-icon="label-o"
+          bind:change="onChange" 
+        />
+      </van-cell-group>
+    </view>
+    <view class="input-item2">
+      <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+        <view class="picker">
+          <van-icon name="calendar-o" />
+          {{date}}
+        </view>
+      </picker>
+    </view>
+  </view>
+</form>
